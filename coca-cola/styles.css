@@ -1,0 +1,1442 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+.container,
+.wrapper,
+.logo,
+nav ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container,
+.wrapper,
+.logo,
+nav ul li a{
+    justify-content: space-around;
+}
+header{
+    padding-top: 20px;
+}
+.coca-cola-companylogo{
+    width: 150px;
+}
+nav ul li{
+    font-size: 25px;
+    display: flex;
+    list-style: none;
+}
+ul{
+    gap: 30px;
+    display: flex;
+}
+a:hover{
+    color: black;
+    transition: .5s;
+}
+a:hover i {
+    transform: rotate(360deg);
+    transition: .1s;
+}
+a i{
+    transform: rotate(270deg);
+    transition: .1s;
+}
+a{
+    transition: .5s;
+    display: flex;
+    text-decoration: none;
+    color: red;
+}
+.line1{
+    height: 2px;
+    width: 100%; 
+    background: linear-gradient(90deg, transparent 0%, red 50%, transparent 100%); 
+    margin-top: 15px;
+}
+.btn1 {
+    all: unset; 
+    cursor: pointer;
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 15px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    transition: .5s;
+}
+.btn1:hover {
+    transition: .5s;
+    background-color: black;
+    box-shadow: 0 4px 15px rgba(24, 0, 0, 0.3);
+}
+.btn1 a {
+    color: white;
+    text-decoration: none;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.4s ease;
+}
+.dropdown-menu li a {
+    padding: 10px 20px;
+    color: red;
+    text-decoration: none;
+    display: block;
+    transition: .5s;
+}
+.dropdown-menu li a:hover{
+    color: black;
+    transition: .5s;
+}
+.dropdown-menu li a:hover {
+    background: white;
+}
+.dropdown:hover .dropdown-menu {
+    box-shadow: 1px 1px 10px 1px rgb(190, 190, 190);
+    max-height: 300px;
+}
+.dropdown a i {
+    transition: transform 0.5s ease;
+}
+.main-content {
+    position: relative;
+    height: calc(100vh - 82px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.red-circle {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-color: rgba(255, 0, 0, 0.338);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 8s infinite alternate;
+}
+.bottle-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-top: -40px;
+}
+.bottle {
+    margin-left: -300px;
+    width: 550px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    transition: transform 0.5s ease;
+    animation: float 3s ease-in-out infinite;
+}
+.bottle:hover {
+    transform: scale(1.05);
+}
+.slideshow-container img{
+    width: 350px;
+}
+.slideshow-container {
+    width: 420px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.slide.active {
+    opacity: 1;
+}
+.slide h3 {
+    color: red;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.slide p {
+    color: black;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+.slideshow-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.prev-btn, .next-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.prev-btn:hover, .next-btn:hover {
+    transform: scale(1.2);
+}
+.dots-container {
+    display: flex;
+    gap: 10px;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.dot.active {
+    background-color: red;
+}
+.floating-bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.589);
+    border-radius: 50%;
+    animation: float-up linear infinite;
+}
+.bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    top: 10%;
+    animation-duration: 5s;
+}
+.bubble:nth-child(2) {
+    width: 25px;
+    height: 25px;
+    left: 25%;
+    top: 30%;
+    animation-duration: 9s;
+    animation-delay: 2s;
+}
+.bubble:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    left: 70%;
+    top: 20%;
+    animation-duration: 13s;
+    animation-delay: 1s;
+}
+.bubble:nth-child(4) {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    top: 50%;
+    animation-duration: 14s;
+}
+.bubble:nth-child(5) {
+    width: 20px;
+    height: 20px;
+    left: 80%;
+    top: 70%;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+}
+@keyframes float-up {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+    }
+}
+@media (max-width: 768px) {
+    .bottle-container {
+        flex-direction: column;
+        gap: 40px;
+    }   
+    .bottle {
+        width: 200px;
+    }
+    .slideshow-container {
+        width: 320px;
+        height: 350px;
+    }
+}
+
+.all-brends{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* ჰორიზონტალურად ცენტრი */
+    align-items: center;     /* ვერტიკალურად ცენტრი */
+    height: 500px;
+    transform: translateX(-70px);
+}
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px); /* 3 ფოტო თითო ხაზზე */
+    grid-gap: 80px; /* დაშორება ფოტოების შორის */
+  }
+
+  .photo-grid a img {
+    width: 200px;  /* ერთნაირი ზომა */
+    height: 200px;
+    object-fit: cover; /* ფოტო არ დამახინჯდეს */
+    border-radius: 10px; /* უნაგირო კუთხეები */
+    transition: transform 0.3s;
+  }
+
+  .photo-grid a img:hover {
+    transform: scale(1.1); /* ჰოვერზე იზრდება */
+  }
+.main-content3{
+    padding-top: 70px;
+    height: 750px;
+    /* background-color: red; */
+}
+.circle2{
+    position: absolute;
+    transform: translateX(-200px);
+    width: 600px;
+    height: 600px;
+    background-color: rgb(202, 1, 1);
+    border-radius: 60% 90% 60%;
+    z-index: -1;
+}
+.qila{
+    margin-top: 40px;
+    margin-left: -100px;
+    transform: rotate(380deg);
+    width: 800px;
+}
+.circle3{
+     position: absolute;
+    transform: translateX(925px);
+    width: 600px;
+    height: 600px;
+    background-color: rgb(202, 1, 1);
+    border-radius: 50% 20% 20%;
+    z-index: -1;
+}
+h1{
+    transform: translateX(100px);
+    margin-top: 100px;
+    color: white;
+}
+span{
+    z-index: 1;
+    font-size: 10px;
+    color: white;
+}
+.text{
+    font-size: 20px;
+    padding-top: 60px;
+    transform: translateX(50px);
+}
+body{
+    overflow-x: hidden;
+}
+.bbubble {
+    position: absolute;
+    bottom: -680px;
+    background: rgba(255, 0, 0, 0.61);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation-name: rise;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  /* სხვადასხვა ზომები და პოზიციები */
+  .bbubble:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    left: 10%;
+    animation-duration: 8s;
+    animation-delay: 0s;
+  }
+  .bbubble:nth-child(2) {
+    width: 15px;
+    height: 15px;
+    left: 25%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+  }
+  .bbubble:nth-child(3) {
+    width: 25px;
+    height: 25px;
+    left: 40%;
+    animation-duration: 7s;
+    animation-delay: 4s;
+  }
+  .bbubble:nth-child(4) {
+    width: 10px;
+    height: 10px;
+    left: 55%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+  }
+  .bbubble:nth-child(5) {
+    width: 18px;
+    height: 18px;
+    left: 70%;
+    animation-duration: 9s;
+    animation-delay: 3s;
+  }
+  .bbubble:nth-child(6) {
+    width: 12px;
+    height: 12px;
+    left: 80%;
+    animation-duration: 6.5s;
+    animation-delay: 5s;
+  }
+  .bbubble:nth-child(7) {
+    width: 22px;
+    height: 22px;
+    left: 90%;
+    animation-duration: 7.5s;
+    animation-delay: 6s;
+  }
+
+  /* ბუშტის ანიმაცია: ზემოთ ასვლა და გამქრობა */
+  @keyframes rise {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-110vh) scale(1.3);
+      opacity: 0;
+    }
+  }
+  .all{
+    padding-top: 100px;
+  }
+  .main-content4{
+    padding-top: 100px;
+    height: 500px;
+    background-color: black;
+  }
+  .end-logo img{
+    height: 50px;
+  }
+  .end{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+  }
+  button a{
+    color: white;
+    text-decoration: none;
+  }
+  .locat{
+    border: solid  white;
+    border-radius: 20px;
+    font-size: 20px;
+    padding:5px 10px;
+    background-color: black;
+    color: white;
+    transition: .5s;
+    i{
+        transform: translateX(-4px);
+    }
+  }
+  .locat:hover{
+    border: solid  white;
+    box-shadow: 1px 1px 20px white;
+    background-color: white;
+    color: black;
+    transition: .5s;
+    i{
+        transform: translateX(-4px);
+    }
+  }
+
+  .line2{
+    height: 2px;
+    width: 100%; 
+    background: linear-gradient(90deg, transparent 0%, white 50%, transparent 100%); 
+    margin-top: 15px;
+  }
+  .span-end{
+    padding-top: 50px;
+    display: flex;
+    padding-left: 270px;
+    gap: 40px;
+    color: white;
+  }
+  .spn1{
+    font-size: 15px;
+  }
+  .spn1 a{
+    text-decoration: none;
+    color: white;
+  }
+  .span-end1{
+     padding-top: 30px;
+    display: flex;
+    padding-left: 270px;
+    gap: 40px;
+    color: white;
+  }
+  .span-end2{
+     padding-top: 20px;
+    display: flex;
+    padding-left: 270px;
+    gap: 40px;
+    color: white;
+  }
+  .soc a{
+    text-decoration: none;
+    display: flex;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .icon3{
+    gap: 20px;
+    display: flex;
+    padding-left: 310px;
+  }
+.rotate{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+    .rotate:hover{
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+.rotate2{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+    .rotate2:hover{
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+.rotate3{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+    .rotate3:hover{
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+    .padd{
+        padding-top: 50px;
+    }
+.weli{
+    color: rgb(172, 172, 172);
+    padding-top: 20px;
+    transform: translateX(920px);
+}
+.brand-title{
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    transform: translateX(-40px);
+    font-size: 40px;
+}
+/* ==================== */
+/* ძირითადი რესპონსივი სტილები */
+/* ==================== */
+
+/* დიდი დესკტოპი (> 1200px) - არსებული სტილები */
+
+/* საშუალო დესკტოპი / ტაბლეტი ლანდსკეიპში (1024px - 1200px) */
+@media (max-width: 1200px) {
+    .bottle-container {
+        gap: 60px;
+    }
+    
+    .bottle {
+        width: 450px;
+        margin-left: -200px;
+    }
+    
+    .slideshow-container {
+        width: 380px;
+        height: 480px;
+    }
+    
+    .slideshow-container img {
+        width: 320px;
+    }
+    
+    .qila {
+        width: 650px;
+        margin-left: -70px;
+    }
+    
+    .circle2 {
+        width: 500px;
+        height: 500px;
+        transform: translateX(-150px);
+    }
+    
+    .circle3 {
+        width: 500px;
+        height: 500px;
+        transform: translateX(750px);
+    }
+    
+    .all-brends {
+        transform: translateX(-30px);
+    }
+    
+    .photo-grid {
+        grid-template-columns: repeat(3, 160px);
+        grid-gap: 60px;
+    }
+    
+    .photo-grid a img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* ტაბლეტი (768px - 1023px) */
+@media (max-width: 1023px) {
+    .wrapper {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    
+    .logo, nav {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 130px;
+    }
+    
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        font-size: 22px;
+    }
+    
+    .btn1 {
+        font-size: 18px;
+        padding: 12px 35px;
+        margin-top: 10px;
+    }
+    
+    .bottle-container {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 20px;
+    }
+    
+    .bottle {
+        width: 300px;
+        margin-left: 0;
+        order: 2;
+    }
+    
+    .slideshow-container {
+        width: 350px;
+        height: 420px;
+        order: 1;
+    }
+    
+    .slideshow-container img {
+        width: 280px;
+    }
+    
+    .red-circle {
+        width: 500px;
+        height: 500px;
+    }
+    
+    .main-content3 {
+        padding-top: 50px;
+        height: 700px;
+    }
+    
+    .circle2 {
+        width: 400px;
+        height: 400px;
+        transform: translateX(-120px);
+    }
+    
+    .circle3 {
+        width: 400px;
+        height: 400px;
+        transform: translateX(550px);
+    }
+    
+    .qila {
+        width: 500px;
+        margin-left: -30px;
+    }
+    
+    h1 {
+        transform: translateX(0);
+        text-align: center;
+        font-size: 32px;
+        margin-top: 60px;
+        padding: 0 20px;
+    }
+    
+    .text {
+        transform: translateX(0);
+        padding: 0 40px;
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    .all-brends {
+        transform: translateX(0);
+        height: 450px;
+    }
+    
+    .photo-grid {
+        grid-template-columns: repeat(3, 140px);
+        grid-gap: 40px;
+    }
+    
+    .photo-grid a img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .brand-title {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    
+    h3 {
+        font-size: 35px;
+        transform: translateX(0);
+    }
+    
+    /* Footer რესპონსივი */
+    .end {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 0 20px;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        padding-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .icon3 {
+        padding-left: 0;
+        justify-content: center;
+    }
+    
+    .weli {
+        transform: translateX(0);
+        text-align: center;
+        padding-top: 15px;
+    }
+}
+
+/* დიდი მობილური (576px - 767px) */
+@media (max-width: 767px) {
+    header {
+        padding-top: 15px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 110px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav ul li {
+        font-size: 20px;
+    }
+    
+    .dropdown-menu {
+        min-width: 180px;
+    }
+    
+    .btn1 {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+    
+    .main-content {
+        height: auto;
+        min-height: calc(100vh - 82px);
+        padding: 30px 0;
+    }
+    
+    .bottle {
+        width: 250px;
+    }
+    
+    .slideshow-container {
+        width: 320px;
+        height: 380px;
+    }
+    
+    .slideshow-container img {
+        width: 250px;
+    }
+    
+    .slide {
+        padding: 25px;
+    }
+    
+    .slide h3 {
+        font-size: 22px;
+    }
+    
+    .slide p {
+        font-size: 15px;
+    }
+    
+    .red-circle {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .main-content3 {
+        height: 600px;
+    }
+    
+    .circle2,
+    .circle3 {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .circle3 {
+        transform: translateX(400px);
+    }
+    
+    .qila {
+        width: 380px;
+    }
+    
+    h1 {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+    
+    .text {
+        font-size: 16px;
+        padding-top: 40px;
+    }
+    
+    .all-brends {
+        height: 400px;
+    }
+    
+    .photo-grid {
+        grid-template-columns: repeat(2, 140px);
+        grid-gap: 30px;
+    }
+    
+    .photo-grid a img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .main-content4 {
+        padding-top: 60px;
+        height: auto;
+        padding-bottom: 40px;
+    }
+    
+    .end-logo img {
+        height: 45px;
+    }
+    
+    .locat {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    
+    .spn1 {
+        font-size: 14px;
+    }
+    
+    .icon3 {
+        gap: 15px;
+    }
+    
+    .padd {
+        padding-top: 30px;
+    }
+    
+    .bbubble {
+        bottom: -550px;
+    }
+    
+    h3 {
+        font-size: 30px;
+    }
+    
+    .brand-title {
+        padding-bottom: 30px;
+    }
+}
+
+/* პატარა მობილური (480px - 575px) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 100px;
+    }
+    
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        font-size: 18px;
+    }
+    
+    .dropdown-menu {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 250px;
+        z-index: 1000;
+    }
+    
+    .btn1 {
+        font-size: 15px;
+        padding: 9px 25px;
+        border-radius: 15px;
+    }
+    
+    .bottle {
+        width: 220px;
+    }
+    
+    .slideshow-container {
+        width: 300px;
+        height: 360px;
+    }
+    
+    .slideshow-container img {
+        width: 230px;
+    }
+    
+    .slide {
+        padding: 20px;
+    }
+    
+    .slideshow-controls {
+        bottom: 15px;
+    }
+    
+    .red-circle {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .main-content3 {
+        height: 550px;
+        padding-top: 30px;
+    }
+    
+    .circle2,
+    .circle3 {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .circle3 {
+        transform: translateX(300px);
+    }
+    
+    .qila {
+        width: 320px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+    
+    .text {
+        font-size: 15px;
+        padding: 0 20px;
+        padding-top: 30px;
+    }
+    
+    .all-brends {
+        height: 350px;
+    }
+    
+    .photo-grid {
+        grid-template-columns: repeat(2, 120px);
+        grid-gap: 25px;
+    }
+    
+    .photo-grid a img {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .end-logo img {
+        height: 40px;
+    }
+    
+    .locat {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        gap: 10px;
+    }
+    
+    .spn1 {
+        font-size: 13px;
+    }
+    
+    h3 {
+        font-size: 26px;
+    }
+    
+    .bbubble:nth-child(3),
+    .bbubble:nth-child(4),
+    .bbubble:nth-child(5) {
+        display: none;
+    }
+}
+
+/* ძალიან პატარა მობილური (< 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 90px;
+    }
+    
+    nav ul {
+        gap: 8px;
+    }
+    
+    nav ul li {
+        font-size: 16px;
+    }
+    
+    .line1 {
+        margin-top: 10px;
+    }
+    
+    .btn1 {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+    
+    .bottle-container {
+        gap: 30px;
+    }
+    
+    .bottle {
+        width: 180px;
+        animation: float 4s ease-in-out infinite;
+    }
+    
+    .slideshow-container {
+        width: 280px;
+        height: 340px;
+    }
+    
+    .slideshow-container img {
+        width: 210px;
+    }
+    
+    .slide h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .slide p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .red-circle {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .main-content3 {
+        height: 500px;
+    }
+    
+    .circle2,
+    .circle3 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .circle3 {
+        transform: translateX(250px);
+    }
+    
+    .qila {
+        width: 280px;
+    }
+    
+    h1 {
+        font-size: 22px;
+        margin-top: 25px;
+    }
+    
+    .text {
+        font-size: 14px;
+        padding-top: 25px;
+    }
+    
+    .all-brends {
+        height: 320px;
+    }
+    
+    .photo-grid {
+        grid-template-columns: repeat(2, 110px);
+        grid-gap: 20px;
+    }
+    
+    .photo-grid a img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .main-content4 {
+        padding-top: 40px;
+    }
+    
+    .end {
+        gap: 20px;
+    }
+    
+    .end-logo img {
+        height: 35px;
+    }
+    
+    .line2 {
+        margin-top: 10px;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        gap: 8px;
+    }
+    
+    .spn1 {
+        font-size: 12px;
+    }
+    
+    .icon3 {
+        gap: 12px;
+    }
+    
+    .soc a {
+        padding: 4px;
+    }
+    
+    .weli {
+        padding-top: 10px;
+        font-size: 12px;
+    }
+    
+    h3 {
+        font-size: 24px;
+        padding: 0 15px;
+        text-align: center;
+    }
+    
+    /* ბუშტების შემცირება პატარა ეკრანებზე */
+    .bubble:nth-child(3),
+    .bubble:nth-child(4),
+    .bubble:nth-child(5) {
+        display: none;
+    }
+    
+    .bbubble:nth-child(4),
+    .bbubble:nth-child(5),
+    .bbubble:nth-child(6),
+    .bbubble:nth-child(7) {
+        display: none;
+    }
+}
+
+/* ძალიან პატარა ეკრანები (< 360px) */
+@media (max-width: 360px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 95px);
+        grid-gap: 15px;
+    }
+    
+    .photo-grid a img {
+        width: 105px;
+        height: 105px;
+    }
+    
+    .slideshow-container {
+        width: 260px;
+        height: 320px;
+    }
+    
+    .slideshow-container img {
+        width: 190px;
+    }
+    
+    .bottle {
+        width: 160px;
+    }
+    
+    .circle3 {
+        transform: translateX(200px);
+    }
+    
+    .qila {
+        width: 250px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    .locat {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+    
+    .spn1 {
+        font-size: 11px;
+    }
+    
+    h3 {
+        font-size: 22px;
+    }
+}
+
+/* ლანდსკეიპისთვის (ჰორიზონტალური ორიენტაცია) */
+@media (max-height: 600px) and (orientation: landscape) {
+    .main-content {
+        padding: 20px 0;
+    }
+    
+    .bottle-container {
+        flex-direction: row;
+        gap: 30px;
+        margin-top: 0;
+    }
+    
+    .bottle {
+        width: 220px;
+        margin-left: -100px;
+    }
+    
+    .slideshow-container {
+        width: 320px;
+        height: 280px;
+    }
+    
+    .slideshow-container img {
+        width: 250px;
+    }
+    
+    .slide {
+        padding: 15px;
+    }
+    
+    .main-content3 {
+        height: 500px;
+    }
+    
+    .qila {
+        width: 350px;
+    }
+    
+    .all-brends {
+        height: 300px;
+    }
+}
+
+/* მაღალი რეზოლუციის ეკრანებისთვის (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .coca-cola-companylogo,
+    .bottle,
+    .slideshow-container img,
+    .photo-grid a img,
+    .qila,
+    .end-logo img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* ძალიან დიდი ეკრანებისთვის (> 1920px) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+    
+    .bottle {
+        width: 650px;
+    }
+    
+    .slideshow-container {
+        width: 500px;
+        height: 600px;
+    }
+    
+    .slideshow-container img {
+        width: 400px;
+    }
+    
+    .red-circle {
+        width: 800px;
+        height: 800px;
+    }
+}
+
+/* მობილურისთვის ტაჩ-ეფექტების გაუმჯობესება */
+@media (hover: none) and (pointer: coarse) {
+    .btn1:active {
+        background-color: black;
+        transform: scale(0.98);
+    }
+    
+    .photo-grid a img:active {
+        transform: scale(1.05);
+    }
+    
+    .bottle:active {
+        transform: scale(1.03);
+    }
+    
+    .dropdown-menu {
+        touch-action: pan-y;
+    }
+}
+
+/* მობილურის მენიუსთვის დამატებითი სტილები */
+@media (max-width: 767px) {
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+        max-height: 300px;
+    }
+    
+    .dropdown a:focus i {
+        transform: rotate(360deg);
+    }
+}
+
+/* გასასწორებელი ფიქსები */
+@media (max-width: 1023px) {
+    .main-content,
+    .main-content3,
+    .main-content4 {
+        overflow: hidden;
+    }
+    
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+}

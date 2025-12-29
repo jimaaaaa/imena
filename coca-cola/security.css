@@ -1,0 +1,805 @@
+:root {
+  --bg: #0b0b0c;
+  --card: #ffffff;
+  --muted: #888;
+  --text: #000000;
+  --accent: #e31b23;
+  --border: #262626;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+
+.container,
+.wrapper,
+.logo,
+nav ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container,
+.wrapper,
+.logo,
+nav ul li a{
+    justify-content: space-around;
+}
+header{
+    padding-top: 20px;
+}
+.coca-cola-companylogo{
+    width: 150px;
+}
+nav ul li{
+    font-size: 25px;
+    display: flex;
+    list-style: none;
+}
+ul{
+    gap: 30px;
+    display: flex;
+}
+a:hover{
+    color: white;
+    transition: .5s;
+}
+a:hover i {
+    transform: rotate(360deg);
+    transition: .1s;
+}
+a i{
+    transform: rotate(270deg);
+    transition: .1s;
+}
+a{
+    transition: .5s;
+    display: flex;
+    text-decoration: none;
+    color: red;
+}
+.line1{
+    height: 2px;
+    width: 100%; 
+    background: linear-gradient(90deg, transparent 0%, white 50%, transparent 100%); 
+    margin-top: 15px;
+}
+.btn1 {
+    all: unset; 
+    cursor: pointer;
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 15px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    transition: .5s;
+}
+.btn1:hover {
+    transition: .5s;
+    background-color: rgb(255, 54, 54);
+    box-shadow: 0 4px 15px rgba(24, 0, 0, 0.3);
+}
+.btn1 a {
+    color: white;
+    text-decoration: none;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.4s ease;
+}
+.dropdown-menu li a {
+    padding: 10px 20px;
+    color: red;
+    text-decoration: none;
+    display: block;
+    transition: .5s;
+}
+.dropdown-menu li a:hover{
+    color: black;
+    transition: .5s;
+}
+.dropdown-menu li a:hover {
+    background: white;
+}
+.dropdown:hover .dropdown-menu {
+    box-shadow: 1px 1px 10px 1px rgb(190, 190, 190);
+    max-height: 300px;
+}
+.dropdown a i {
+    transition: transform 0.5s ease;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #4e0000, #ff0000 35%, #4e0000);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial;
+  padding: 20px;
+}
+
+p {
+  color: black;
+}
+
+/* --- Layout --- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;   /* sidebar წაშლილია, card სრულ სიგანეზე */
+  max-width: 100%;             /* აღარ ზღუდავს სიგანეს */
+  margin: 0;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Sidebar (თუ ოდესმე დაგჭირდება) --- */
+.side {
+  position: sticky;
+  top: 20px;
+  align-self: start;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.side h3 {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+.toc {
+  list-style: none;
+  padding: 10px;
+}
+
+.toc li {
+  margin: 2px 0;
+}
+
+.toc a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid transparent;
+  transition: .2s ease;
+}
+
+.toc a:hover {
+  background: #1b1c1d;
+  border-color: #2a2a2a;
+}
+
+/* --- Card --- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;     /* ოდნავ მომრგვალებული კუთხეები */
+  box-shadow: var(--shadow);
+
+  width: 60%;              /* სიგანის დაყენება */
+  margin: 40px auto;       /* ჰორიზონტალურად ცენტრში */
+  padding: 40px 60px;      /* შიდა დაშორება */
+}
+
+h1 {
+  margin-bottom: 14px;
+  font-weight: 800;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: .95rem;
+  margin-bottom: 20px;
+}
+
+/* --- Accordion --- */
+.accordion-item {
+  border-top: 1px solid var(--border);
+}
+
+.accordion-header {
+  cursor: pointer;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.accordion-header:hover {
+  color: var(--accent);
+}
+
+.chev {
+  width: 12px;
+  height: 12px;
+  border: solid #aaa;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+}
+
+.accordion-item.active .chev {
+  transform: rotate(-135deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+  color: #dcdcdf;
+  padding-right: 10px;
+}
+
+.accordion-content.open {
+  padding: 0 0 18px 0;
+}
+
+
+
+
+  .all{
+    padding-top: 100px;
+  }
+  .main-content4{
+    padding-top: 100px;
+    height: 500px;
+
+  }
+  .end-logo img{
+    height: 50px;
+  }
+  .end{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+  }
+  button a{
+    color: white;
+    text-decoration: none;
+  }
+button.locat:hover{
+  background-color: red;
+  border: solid red;
+}
+  .locat{
+    background-color: #ff0000;
+    border: solid  #ff0000;
+    border-radius: 20px;
+    font-size: 20px;
+    padding:5px 10px;
+    transition: .5s;
+    i{
+        transform: translateX(-4px);
+    }
+  }
+  .locat:hover{
+    border: solid  white;
+    box-shadow: 1px 1px 20px white;
+    background-color: white;
+    color: black;
+    transition: .5s;
+    i{
+        transform: translateX(-4px);
+    }
+  }
+
+  .line2{
+    height: 2px;
+    width: 100%; 
+    background: linear-gradient(90deg, transparent 0%, white 50%, transparent 100%); 
+    margin-top: 15px;
+  }
+  .span-end{
+    padding-top: 50px;
+    display: flex;
+    padding-left: 270px;
+    gap: 40px;
+    color: white;
+  }
+  .spn1{
+    font-size: 15px;
+  }
+  .spn1 a{
+    text-decoration: none;
+    color: white;
+  }
+  .span-end1{
+     padding-top: 30px;
+    display: flex;
+    padding-left: 270px;
+    gap: 40px;
+    color: white;
+  }
+  .span-end2{
+     padding-top: 20px;
+    display: flex;
+    padding-left: 270px;
+    gap: 40px;
+    color: white;
+  }
+  .soc a{
+    text-decoration: none;
+    display: flex;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .icon3{
+    gap: 20px;
+    display: flex;
+    padding-left: 310px;
+  }
+.rotate{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+    .rotate:hover{
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+.rotate2{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+    .rotate2:hover{
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+.rotate3{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+    .rotate3:hover{
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+    .padd{
+        padding-top: 50px;
+    }
+.weli{
+    color: rgb(172, 172, 172);
+    padding-top: 20px;
+    transform: translateX(920px);
+}
+.brand-title{
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    transform: translateX(-40px);
+    font-size: 40px;
+}
+/* ==================== */
+/* SECURITY.CSS რესპონსივი სტილები */
+/* ==================== */
+
+/* ტაბლეტი (1024px - 768px) */
+@media (max-width: 1024px) {
+    .card {
+        width: 70%;
+        padding: 35px 50px;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        padding-left: 150px;
+    }
+    
+    .icon3 {
+        padding-left: 190px;
+    }
+    
+    .weli {
+        transform: translateX(700px);
+    }
+}
+
+/* დიდი მობილური (768px - 576px) */
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+        padding: 30px 40px;
+        margin: 30px auto;
+    }
+    
+    header {
+        padding-top: 15px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 120px;
+    }
+    
+    nav ul li {
+        font-size: 20px;
+    }
+    
+    ul {
+        gap: 15px;
+    }
+    
+    .btn1 {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        padding-left: 50px;
+    }
+    
+    .icon3 {
+        padding-left: 90px;
+    }
+    
+    .end {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .weli {
+        transform: translateX(0);
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    h3 {
+        font-size: 30px;
+        transform: translateX(0);
+    }
+    
+    .brand-title {
+        padding-bottom: 30px;
+    }
+    
+    .padd {
+        padding-top: 30px;
+    }
+    
+    .main-content4 {
+        padding-top: 60px;
+        height: auto;
+        padding-bottom: 40px;
+    }
+    
+    .locat {
+        font-size: 18px;
+    }
+}
+
+/* საშუალო მობილური (576px - 480px) */
+@media (max-width: 576px) {
+    body {
+        padding: 15px;
+    }
+    
+    .card {
+        width: 90%;
+        padding: 25px 30px;
+        margin: 20px auto;
+        border-radius: 16px;
+    }
+    
+    .wrapper {
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+    
+    .logo, nav {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 100px;
+    }
+    
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        font-size: 18px;
+    }
+    
+    .btn1 {
+        font-size: 16px;
+        padding: 10px 25px;
+        margin-top: 10px;
+    }
+    
+    .line1 {
+        margin-top: 10px;
+    }
+    
+    .dropdown-menu {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 250px;
+        z-index: 1000;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        flex-direction: column;
+        padding-left: 0;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .icon3 {
+        padding-left: 0;
+        justify-content: center;
+    }
+    
+    .end-logo img {
+        height: 40px;
+    }
+    
+    .locat {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    
+    .spn1 {
+        font-size: 14px;
+    }
+    
+    .main-content4 {
+        padding-top: 40px;
+    }
+    
+    .line2 {
+        margin-top: 10px;
+    }
+    
+    h3 {
+        font-size: 26px;
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .meta {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    
+    .accordion-header {
+        font-size: 16px;
+        padding: 16px 0;
+    }
+}
+
+/* პატარა მობილური (480px - 360px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .card {
+        width: 95%;
+        padding: 20px 25px;
+        margin: 15px auto;
+        border-radius: 14px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 90px;
+    }
+    
+    nav ul {
+        gap: 8px;
+    }
+    
+    nav ul li {
+        font-size: 16px;
+    }
+    
+    .btn1 {
+        font-size: 15px;
+        padding: 8px 20px;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        gap: 10px;
+    }
+    
+    .spn1 {
+        font-size: 13px;
+    }
+    
+    .soc a {
+        padding: 4px;
+    }
+    
+    .weli {
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .accordion-header {
+        font-size: 15px;
+        padding: 14px 0;
+    }
+    
+    .accordion-content {
+        font-size: 14px;
+    }
+}
+
+/* ძალიან პატარა მობილური (< 360px) */
+@media (max-width: 360px) {
+    .card {
+        width: 100%;
+        padding: 15px 20px;
+        border-radius: 12px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 80px;
+    }
+    
+    nav ul {
+        gap: 5px;
+    }
+    
+    nav ul li {
+        font-size: 14px;
+    }
+    
+    .btn1 {
+        font-size: 14px;
+        padding: 7px 15px;
+        border-radius: 15px;
+    }
+    
+    .locat {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+    
+    .spn1 {
+        font-size: 12px;
+    }
+    
+    h3 {
+        font-size: 22px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    .meta {
+        font-size: 0.85rem;
+    }
+}
+
+/* ლანდსკეიპის რეჟიმი (ჰორიზონტალური) */
+@media (max-height: 600px) and (orientation: landscape) {
+    .card {
+        margin: 20px auto;
+        padding: 20px 30px;
+    }
+    
+    .main-content4 {
+        padding-top: 40px;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* მობილურისთვის ტაჩ-ეფექტები */
+@media (hover: none) and (pointer: coarse) {
+    .btn1:active {
+        background-color: black;
+        transform: scale(0.98);
+    }
+    
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+        max-height: 300px;
+    }
+    
+    .accordion-header:active {
+        color: var(--accent);
+    }
+}
+
+/* დიდი ეკრანებისთვის (> 1920px) */
+@media (min-width: 1920px) {
+    .card {
+        max-width: 1200px;
+        margin: 50px auto;
+    }
+    
+    .container {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+}
+
+/* ფიქსები მობილურისთვის */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        max-width: 90vw;
+    }
+    
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .grid {
+        gap: 16px;
+    }
+}

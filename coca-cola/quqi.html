@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quqi.css">
+    <title>ქუქი პარამეტრების ფანჯარა</title>
+</head>
+<body>
+
+    <!-- აი ეს ტექსტი ჩასვი სადაც გინდა -->
+    <!-- <div style="padding: 50px;"> -->
+        <!-- <h1>ჩემი საიტი</h1>
+        <p>ეს არის ნორმალური ტექსტი საიტზე. 
+           <button class="cookie-link" id="openCookieSettings">ქუქი ფაილები</button>
+           დააჭირეთ ამ ტექსტს რომ გაიხსნას ქუქი პარამეტრები.
+        </p>
+        
+        <p>ან აქ: <span class="cookie-link" id="openCookieSettings2">ქუქი პარამეტრები</span></p>
+        
+        <p>ფუტერში: <a href="#cookie-settings" class="cookie-link">ქუქი პარამეტრები</a></p>
+    </div> -->
+
+    <!-- ბნელი ფონი -->
+    <div class="modal-overlay" id="cookieOverlay"></div>
+
+    <!-- ქუქი პარამეტრების ფანჯარა -->
+    <div class="cookie-modal" id="cookieModal">
+        <button class="close-btn" id="closeModal">&times;</button>
+        
+        <h2 style="margin-top: 0; color: #333;">ქუქი პარამეტრები</h2>
+        
+        <p style="color: #666; font-size: 14px;">
+            ჩვენ ვიყენებთ ქუქი ფაილებს საიტის მუშაობისთვის. აირჩიეთ რომელი ქუქი ფაილების დაშვება გსურთ.
+        </p>
+
+        <div class="cookie-category">
+            <div class="category-header">
+                <strong>აუცილებელი ქუქი ფაილები</strong>
+                <label class="switch">
+                    <input type="checkbox" checked disabled>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <p style="font-size: 13px; color: #555; margin: 5px 0 0 0;">
+                ეს ქუქი ფაილები აუცილებელია საიტის ძირითადი ფუნქციებისთვის და არ შეიძლება გამორთვა.
+            </p>
+        </div>
+
+        <div class="cookie-category">
+            <div class="category-header">
+                <strong>ფუნქციონალური ქუქი ფაილები</strong>
+                <label class="switch">
+                    <input type="checkbox" id="functionalCookies" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <p style="font-size: 13px; color: #555; margin: 5px 0 0 0;">
+                ეს ქუქი ფაილები საშუალებას გვაძლევს დავიმახსოვროთ თქვენი პარამეტრები და პრეფერენციები.
+            </p>
+        </div>
+
+        <div class="cookie-category">
+            <div class="category-header">
+                <strong>ანალიტიკური ქუქი ფაილები</strong>
+                <label class="switch">
+                    <input type="checkbox" id="analyticsCookies" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <p style="font-size: 13px; color: #555; margin: 5px 0 0 0;">
+                ეს ქუქი ფაილები გვეხმარება გავიგოთ როგორ ხარჯავთ მომხმარებლები დროს საიტზე.
+            </p>
+        </div>
+
+        <div class="cookie-category">
+            <div class="category-header">
+                <strong>მარკეტინგული ქუქი ფაილები</strong>
+                <label class="switch">
+                    <input type="checkbox" id="marketingCookies">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <p style="font-size: 13px; color: #555; margin: 5px 0 0 0;">
+                ეს ქუქი ფაილები გამოიყენება რეკლამებისთვის და მარკეტინგული ანალიზისთვის.
+            </p>
+        </div>
+
+        <div style="margin-top: 25px; text-align: right;">
+            <button class="cookie-btn reject-btn" id="rejectAllCookies">უარყოფა ყველა</button>
+            <button class="cookie-btn save-btn" id="saveCookieSettings">შენახვა და დახურვა</button>
+            <button class="cookie-btn accept-all" id="acceptAllCookies">მიღება ყველა</button>
+        </div>
+    </div>
+
+    <script src="quqi.js">
+     
+    </script>
+</body>
+</html>

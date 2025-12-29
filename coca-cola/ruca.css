@@ -1,0 +1,798 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container,
+.wrapper,
+.logo,
+nav ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container,
+.wrapper,
+.logo,
+nav ul li a{
+    justify-content: space-around;
+}
+header{
+    padding-top: 20px;
+}
+.coca-cola-companylogo{
+    width: 150px;
+}
+nav ul li{
+    font-size: 25px;
+    display: flex;
+    list-style: none;
+}
+ul{
+    gap: 30px;
+    display: flex;
+}
+a:hover{
+    color: black;
+    transition: .5s;
+}
+a:hover i {
+    transform: rotate(360deg);
+    transition: .1s;
+}
+a i{
+    transform: rotate(270deg);
+    transition: .1s;
+}
+a{
+    transition: .5s;
+    display: flex;
+    text-decoration: none;
+    color: red;
+}
+.line1{
+    height: 2px;
+    width: 100%; 
+    background: linear-gradient(90deg, transparent 0%, red 50%, transparent 100%); 
+    margin-top: 15px;
+}
+.btn1 {
+    all: unset; 
+    cursor: pointer;
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 15px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    transition: .5s;
+}
+.btn1:hover {
+    transition: .5s;
+    background-color: black;
+    box-shadow: 0 4px 15px rgba(24, 0, 0, 0.3);
+}
+.btn1 a {
+    color: white;
+    text-decoration: none;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.4s ease;
+}
+.dropdown-menu li a {
+    padding: 10px 20px;
+    color: red;
+    text-decoration: none;
+    display: block;
+    transition: .5s;
+}
+.dropdown-menu li a:hover{
+    color: black;
+    transition: .5s;
+}
+.dropdown-menu li a:hover {
+    background: white;
+}
+.dropdown:hover .dropdown-menu {
+    box-shadow: 1px 1px 10px 1px rgb(190, 190, 190);
+    max-height: 300px;
+}
+.dropdown a i {
+    transition: transform 0.5s ease;
+}
+.container2{
+    display: flex;
+    padding-left: 200px;
+    /* justify-content: center; */
+}
+h1{
+    padding-bottom: 30px;
+    padding-top: 70px;
+}
+p{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+p a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: .5s;
+}
+p a:hover{
+    color: red;
+    transition: .5s;
+}
+.line{
+    height: 1px;
+    width: 1000px;
+    background-color: black;
+}
+.down{
+    padding-top: 20px;
+    display: flex;
+    gap: 50px;
+    text-decoration: underline;
+}
+ .all{
+    padding-top: 100px;
+  }
+  .main-content4{
+    padding-top: 100px;
+    height: 500px;
+    background-color: black;
+  }
+  .end-logo img{
+    height: 50px;
+  }
+  .end{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+  }
+  button a{
+    color: white;
+    text-decoration: none;
+  }
+  .locat{
+    border: solid  white;
+    border-radius: 20px;
+    font-size: 20px;
+    padding:5px 10px;
+    background-color: black;
+    color: white;
+    transition: .5s;
+    i{
+        transform: translateX(-4px);
+    }
+  }
+  .locat:hover{
+    border: solid  white;
+    box-shadow: 1px 1px 20px white;
+    background-color: white;
+    color: black;
+    transition: .5s;
+    i{
+        transform: translateX(-4px);
+    }
+  }
+
+  .line2{
+    height: 2px;
+    width: 100%; 
+    background: linear-gradient(90deg, transparent 0%, white 50%, transparent 100%); 
+    margin-top: 15px;
+  }
+  .span-end{
+    padding-top: 50px;
+    display: flex;
+    padding-left: 270px;
+    gap: 40px;
+    color: white;
+  }
+  .spn1{
+    font-size: 15px;
+  }
+  .spn1 a{
+    text-decoration: none;
+    color: white;
+  }
+  .span-end1{
+     padding-top: 30px;
+    display: flex;
+    padding-left: 270px;
+    gap: 40px;
+    color: white;
+  }
+  .span-end2{
+     padding-top: 20px;
+    display: flex;
+    padding-left: 270px;
+    gap: 40px;
+    color: white;
+  }
+  .soc a{
+    text-decoration: none;
+    display: flex;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .icon3{
+    gap: 20px;
+    display: flex;
+    padding-left: 310px;
+  }
+.rotate{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+    .rotate:hover{
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+.rotate2{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+    .rotate2:hover{
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+.rotate3{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+    .rotate3:hover{
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+    .padd{
+        padding-top: 50px;
+    }
+.weli{
+    color: rgb(172, 172, 172);
+    padding-top: 20px;
+    transform: translateX(920px);
+}
+.brand-title{
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    transform: translateX(-40px);
+    font-size: 40px;
+}
+
+/* ==================== */
+/* RUCA.CSS რესპონსივი სტილები */
+/* ==================== */
+
+/* ტაბლეტი (1024px - 768px) */
+@media (max-width: 1024px) {
+    .container2 {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    
+    .line {
+        width: 700px;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        padding-left: 150px;
+    }
+    
+    .icon3 {
+        padding-left: 190px;
+    }
+    
+    .weli {
+        transform: translateX(700px);
+    }
+    
+    h1 {
+        padding-top: 50px;
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 35px;
+        transform: translateX(0);
+    }
+}
+
+/* დიდი მობილური (768px - 576px) */
+@media (max-width: 768px) {
+    .container2 {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .line {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    header {
+        padding-top: 15px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 120px;
+    }
+    
+    nav ul li {
+        font-size: 20px;
+    }
+    
+    ul {
+        gap: 15px;
+    }
+    
+    .btn1 {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+    
+    .dropdown-menu {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 250px;
+        z-index: 1000;
+    }
+    
+    h1 {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        font-size: 26px;
+        text-align: center;
+    }
+    
+    p {
+        padding-top: 20px;
+        padding-bottom: 15px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    p a {
+        font-size: 18px;
+    }
+    
+    .down {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        padding-left: 50px;
+    }
+    
+    .icon3 {
+        padding-left: 90px;
+    }
+    
+    .end {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .weli {
+        transform: translateX(0);
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    h3 {
+        font-size: 30px;
+        transform: translateX(0);
+        text-align: center;
+    }
+    
+    .brand-title {
+        padding-bottom: 30px;
+    }
+    
+    .padd {
+        padding-top: 30px;
+    }
+    
+    .main-content4 {
+        padding-top: 60px;
+        height: auto;
+        padding-bottom: 40px;
+    }
+    
+    .locat {
+        font-size: 18px;
+    }
+    
+    .spn1 {
+        font-size: 14px;
+    }
+}
+
+/* საშუალო მობილური (576px - 480px) */
+@media (max-width: 576px) {
+    .container2 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .wrapper {
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+    
+    .logo, nav {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 100px;
+    }
+    
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        font-size: 18px;
+    }
+    
+    .btn1 {
+        font-size: 16px;
+        padding: 10px 25px;
+        margin-top: 10px;
+    }
+    
+    .line1 {
+        margin-top: 10px;
+    }
+    
+    h1 {
+        padding-top: 30px;
+        padding-bottom: 15px;
+        font-size: 24px;
+    }
+    
+    p {
+        padding-top: 15px;
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
+    
+    p a {
+        font-size: 16px;
+    }
+    
+    .line {
+        max-width: 100%;
+    }
+    
+    .down {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        flex-direction: column;
+        padding-left: 0;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .icon3 {
+        padding-left: 0;
+        justify-content: center;
+    }
+    
+    .end-logo img {
+        height: 40px;
+    }
+    
+    .locat {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    
+    .spn1 {
+        font-size: 14px;
+    }
+    
+    .main-content4 {
+        padding-top: 40px;
+    }
+    
+    .line2 {
+        margin-top: 10px;
+    }
+    
+    h3 {
+        font-size: 26px;
+        padding: 0 15px;
+    }
+    
+    .brand-title {
+        padding-top: 30px;
+    }
+}
+
+/* პატარა მობილური (480px - 360px) */
+@media (max-width: 480px) {
+    .container2 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 90px;
+    }
+    
+    nav ul {
+        gap: 8px;
+    }
+    
+    nav ul li {
+        font-size: 16px;
+    }
+    
+    .btn1 {
+        font-size: 15px;
+        padding: 8px 20px;
+    }
+    
+    h1 {
+        font-size: 22px;
+        padding-top: 25px;
+        padding-bottom: 12px;
+    }
+    
+    p {
+        font-size: 14px;
+        padding-top: 12px;
+        padding-bottom: 8px;
+    }
+    
+    p a {
+        font-size: 15px;
+    }
+    
+    .down {
+        gap: 15px;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        gap: 10px;
+    }
+    
+    .spn1 {
+        font-size: 13px;
+    }
+    
+    .soc a {
+        padding: 4px;
+    }
+    
+    .weli {
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    .locat {
+        font-size: 15px;
+    }
+}
+
+/* ძალიან პატარა მობილური (< 360px) */
+@media (max-width: 360px) {
+    .container2 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .coca-cola-companylogo {
+        width: 80px;
+    }
+    
+    nav ul {
+        gap: 5px;
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        font-size: 15px;
+    }
+    
+    .btn1 {
+        font-size: 14px;
+        padding: 7px 15px;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    
+    p {
+        font-size: 13px;
+    }
+    
+    p a {
+        font-size: 14px;
+    }
+    
+    .down {
+        gap: 10px;
+    }
+    
+    .down a {
+        font-size: 14px;
+    }
+    
+    .locat {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+    
+    .spn1 {
+        font-size: 12px;
+    }
+    
+    h3 {
+        font-size: 22px;
+    }
+    
+    .brand-title {
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+}
+
+/* ლანდსკეიპის რეჟიმი (ჰორიზონტალური) */
+@media (max-height: 600px) and (orientation: landscape) {
+    .container2 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    h1 {
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+    
+    .main-content4 {
+        padding-top: 40px;
+    }
+    
+    .span-end,
+    .span-end1,
+    .span-end2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* მობილურისთვის ტაჩ-ეფექტები */
+@media (hover: none) and (pointer: coarse) {
+    .btn1:active {
+        background-color: black;
+        transform: scale(0.98);
+    }
+    
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+        max-height: 300px;
+    }
+    
+    p a:active {
+        color: red;
+        opacity: 0.8;
+    }
+    
+    .locat:active {
+        background-color: white;
+        color: black;
+    }
+}
+
+/* დიდი ეკრანებისთვის (> 1920px) */
+@media (min-width: 1920px) {
+    .container2 {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    
+    .line {
+        width: 1200px;
+    }
+    
+    h1 {
+        font-size: 40px;
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+    
+    p {
+        font-size: 20px;
+        line-height: 1.8;
+    }
+    
+    p a {
+        font-size: 24px;
+    }
+}
+
+/* ფიქსები მობილურისთვის */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        max-width: 90vw;
+    }
+    
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .container2 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
+
+/* ტაბლეტის ვერტიკალური რეჟიმი */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .container2 {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    
+    .line {
+        width: 600px;
+    }
+}
